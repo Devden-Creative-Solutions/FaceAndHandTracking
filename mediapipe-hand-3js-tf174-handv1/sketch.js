@@ -55,8 +55,8 @@ capture.onloadeddata = function(){
 
 
 // certian materials require a light source, which you can add here:
-// var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.0 );
-// scene.add( directionalLight );
+var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.0 );
+scene.add( directionalLight );
 
 
 for (var i = 0; i < 21; i++){ // 21 keypoints
