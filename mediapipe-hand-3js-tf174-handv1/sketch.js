@@ -145,8 +145,8 @@ function drawHands(hands,noKeypoints){
 
       // draw the keypoint and number
       if (!noKeypoints){
-       /* dbg.fillRect(x-2,y-2,4,4);
-        dbg.fillText(j,x,y);*/
+        dbg.fillRect(x-2,y-2,4,4);
+        dbg.fillText(j,x,y);
       }
         
       // draw the skeleton
@@ -170,7 +170,8 @@ function webcam2space(x,y,z){
   )
 }
 
-function render() {
+function render()
+ {
   requestAnimationFrame(render); // this creates an infinite animation loop
     
   if (handposeModel && videoDataLoaded){ // model and video both loaded
@@ -193,7 +194,7 @@ function render() {
     })
   }
   
-  dbg.clearRect(0,0,dbg.canvas.width,dbg.canvas.height);
+  dbg.clearRect(0,0,-dbg.canvas.width,dbg.canvas.height);
   
   dbg.save();
   dbg.fillStyle="red";
