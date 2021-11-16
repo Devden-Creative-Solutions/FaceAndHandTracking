@@ -145,8 +145,8 @@ function drawHands(hands,noKeypoints){
 
       // draw the keypoint and number
       if (!noKeypoints){
-        dbg.fillRect(x-2,y-2,4,4);
-        dbg.fillText(j,x,y);
+       /* dbg.fillRect(x-2,y-2,4,4);
+        dbg.fillText(j,x,y);*/
       }
         
       // draw the skeleton
