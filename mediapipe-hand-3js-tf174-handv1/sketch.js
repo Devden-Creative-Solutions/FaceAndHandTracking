@@ -145,7 +145,7 @@ function drawHands(hands,noKeypoints){
 
       // draw the keypoint and number
       if (!noKeypoints){
-        dbg.fillRect(x-2,y-2,12,12);
+        dbg.fillRect(x-2,y-2,24,24);
         dbg.fillText(j,x,y);
       }
         
