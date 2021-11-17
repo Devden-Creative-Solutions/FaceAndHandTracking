@@ -1,7 +1,7 @@
 // sketch.js
 
 /* global describe handpose tf io THREE*/
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+//import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 // import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/loaders/GLTFLoader.js';
 
 
