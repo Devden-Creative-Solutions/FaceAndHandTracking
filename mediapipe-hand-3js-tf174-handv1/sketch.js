@@ -1,7 +1,7 @@
 // sketch.js
 
 /* global describe handpose tf io THREE*/
-//import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js';
 
 var handposeModel = null; // this will be loaded with the handpose model
 
