@@ -1,6 +1,7 @@
 // sketch.js
 
 /* global describe handpose tf io THREE*/
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 var handposeModel = null; // this will be loaded with the handpose model
 
@@ -67,6 +68,7 @@ for (var i = 0; i < 21; i++){ // 21 keypoints
   // we make each bone a cylindrical shape, but you can use your own models here too
   var geometry = new THREE.CylinderGeometry( isPalm?5:10, 5, 1);
 
+
   var material = new THREE.MeshNormalMaterial();
   // another possible material (after adding a light source):
   // var material = new THREE.MeshPhongMaterial({color:0x00ffff});
@@ -78,6 +80,19 @@ for (var i = 0; i < 21; i++){ // 21 keypoints
   scene.add(obj);
   handMeshes.push(obj);
 }
+
+const loader = new GLTFLoader();
+
+loader.load( './doughnut.glb', function ( gltf ) {
+
+  scene.add( gltf.scene );
+
+}, undefined, function ( error ) {
+
+  console.error( error );
+
+} );
+
 
 // update threejs object position and orientation from the detected hand pose
 // threejs has a "scene" model, so we don't have to specify what to draw each frame,
