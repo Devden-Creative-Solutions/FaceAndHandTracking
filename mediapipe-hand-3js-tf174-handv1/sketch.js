@@ -1,7 +1,7 @@
 // sketch.js
 
 /* global describe handpose tf io THREE*/
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+//import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 var handposeModel = null; // this will be loaded with the handpose model
 
@@ -80,7 +80,7 @@ for (var i = 0; i < 21; i++){ // 21 keypoints
   scene.add(obj);
   handMeshes.push(obj);
 }
-
+/*
 const loader = new GLTFLoader();
 
 loader.load( './doughnut.glb', function ( gltf ) {
@@ -91,7 +91,7 @@ loader.load( './doughnut.glb', function ( gltf ) {
 
   console.error( error );
 
-} );
+} );*/
 
 
 // update threejs object position and orientation from the detected hand pose
