@@ -1,8 +1,8 @@
 // sketch.js
 
 /* global describe handpose tf io THREE*/
-import { GLTFLoader } from 'https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js';
-// import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/loaders/GLTFLoader.js';
+//import { GLTFLoader } from 'https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js';
+ import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/loaders/GLTFLoader.js';
 
 
 var handposeModel = null; // this will be loaded with the handpose model
@@ -56,6 +56,9 @@ capture.onloadeddata = function(){
   camera.position.z = capture.videoWidth/2; // rough estimate for suitable camera distance based on FOV
 }
 
+    gltfLoader.load('https://threejsfundamentals.org/threejs/resources/models/cartoon_lowpoly_small_city_free_pack/scene.gltf', (gltf) => {
+      const root = gltf.scene;
+      scene.add(root);
 
 // certian materials require a light source, which you can add here:
 var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.0 );
@@ -83,7 +86,7 @@ for (var i = 0; i < 21; i++){ // 21 keypoints
   handMeshes.push(obj);
 }
 
-const loader = new GLTFLoader();
+/*const loader = new GLTFLoader();
 
 loader.load( 'doughnut.glb', function ( gltf ) {
 
@@ -93,7 +96,7 @@ loader.load( 'doughnut.glb', function ( gltf ) {
 
   console.error( error );
 
-} );
+} );*/
 
 
 // update threejs object position and orientation from the detected hand pose
