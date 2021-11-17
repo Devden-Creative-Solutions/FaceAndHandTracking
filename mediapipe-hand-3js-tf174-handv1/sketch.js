@@ -82,9 +82,9 @@ for (var i = 0; i < 21; i++){ // 21 keypoints
   handMeshes.push(obj);
 }
 
-/*const loader = new GLTFLoader();
+const loader = new GLTFLoader();
 
-loader.load( './doughnut.glb', function ( gltf ) {
+loader.load( 'doughnut.glb', function ( gltf ) {
 
   scene.add( gltf.scene );
 
@@ -92,7 +92,7 @@ loader.load( './doughnut.glb', function ( gltf ) {
 
   console.error( error );
 
-} );*/
+} );
 
 
 // update threejs object position and orientation from the detected hand pose
