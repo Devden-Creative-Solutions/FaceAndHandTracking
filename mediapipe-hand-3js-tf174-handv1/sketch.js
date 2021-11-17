@@ -56,9 +56,9 @@ capture.onloadeddata = function(){
   camera.position.z = capture.videoWidth/2; // rough estimate for suitable camera distance based on FOV
 }
 
-    gltfLoader.load('https://threejsfundamentals.org/threejs/resources/models/cartoon_lowpoly_small_city_free_pack/scene.gltf', (gltf) => {
+   /* gltfLoader.load('https://threejsfundamentals.org/threejs/resources/models/cartoon_lowpoly_small_city_free_pack/scene.gltf', (gltf) => {
       const root = gltf.scene;
-      scene.add(root);
+      scene.add(root);*/
 
 // certian materials require a light source, which you can add here:
 var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.0 );
